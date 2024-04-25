@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Kata02LeapYear/.vs/Kata02LeapYear
+/Kata02LeapYear/LeapYearConsoleApp/obj/Debug/net8.0
+/Kata02LeapYear/LeapYearConsoleApp/obj
+/Kata02LeapYear/LeapYearUnitTests/obj/Debug/net8.0
+*.json
+/Kata02LeapYear/LeapYearUnitTests/obj/LeapYearUnitTests.csproj.nuget.g.props
+/Kata02LeapYear/LeapYearUnitTests/obj/LeapYearUnitTests.csproj.nuget.g.targets
+/Kata02LeapYear/LeapYearUnitTests/obj/project.nuget.cache
+/Kata02LeapYear/LeapYearConsoleApp/bin/Debug/net8.0
+/Kata02LeapYear/LeapYearUnitTests/bin/Debug/net8.0
