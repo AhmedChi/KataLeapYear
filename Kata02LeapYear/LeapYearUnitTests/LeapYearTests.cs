@@ -28,6 +28,19 @@ namespace LeapYearUnitTests
         }
 
         [Test]
+        [TestCase(1900, false)]
+        [TestCase(2100, false)]
+        [TestCase(2200, false)]
+        public void GivenTheCurrentYearIsNotLeapYear_WhenYearIsDivisbleByFourAndDivibleByHundred_ThenReturnFalse(int year, bool isLeapYearExpected)
+        {
+            //Act
+            var isLeapYearActual = leapYear.IsLeapYear(year);
+
+            //Assert
+            Assert.AreEqual(isLeapYearExpected, isLeapYearActual);
+        }
+
+        [Test]
         [TestCase(2004, true)]
         [TestCase(2008, true)]
         [TestCase(2012, true)]
@@ -41,5 +54,6 @@ namespace LeapYearUnitTests
             //Assert
             Assert.AreEqual(isLeapYearExpected, isLeapYearActual);
         }
+
     }
 }
