@@ -4,7 +4,7 @@ namespace LeapYearUnitTests
 {
     public class LeapYearTests
     {
-        private LeapYear leapYear;
+        private ILeapYear leapYear;
 
         [SetUp]
         public void Setup()

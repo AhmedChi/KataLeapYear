@@ -1,18 +1,16 @@
-﻿using LeapYearConsoleApp.Businesslogic;
-using System;
+﻿using LeapYearConsoleApp;
+using LeapYearConsoleApp.Businesslogic;
+using LeapYearConsoleApp.FileHandling;
 
-var leapYearobject = new LeapYear();
+var jsonFileHandling = new JsonFileHandling();
+var csvFileHandling = new CSVFileHandling();
+var leapYear = new LeapYear();
+
+var runnerobject = new Runner(leapYear, csvFileHandling, jsonFileHandling);
 
 try
 {
-    var currentYear = DateTime.Now.Year;
-
-    for (int year = 1; year <= currentYear; year++)
-    {
-        var isLeapYear = leapYearobject.IsLeapYear(year);
-        Console.WriteLine($"Year: {year},\nLeapYear: {isLeapYear}");
-    }
-    
+    runnerobject.Run();
 }
 catch (Exception exception)
 {

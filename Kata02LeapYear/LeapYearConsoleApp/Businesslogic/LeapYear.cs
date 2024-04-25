@@ -1,6 +1,6 @@
 ﻿namespace LeapYearConsoleApp.Businesslogic
 {
-    public class LeapYear
+    public class LeapYear : ILeapYear
     {
         public bool IsLeapYear(int year)
         {
