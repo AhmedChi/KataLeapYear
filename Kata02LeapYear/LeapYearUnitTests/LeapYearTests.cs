@@ -28,6 +28,8 @@ namespace LeapYearUnitTests
         }
 
         [Test]
+        [TestCase(1700, false)]
+        [TestCase(1800, false)]
         [TestCase(1900, false)]
         [TestCase(2100, false)]
         [TestCase(2200, false)]
@@ -47,6 +49,21 @@ namespace LeapYearUnitTests
         [TestCase(2016, true)]
         [TestCase(2020, true)]
         public void GivenTheCurrentYearIsLeapYear_WhenYearIsDivisbleByFourNotDivibleByHundred_ThenReturnTrue(int year, bool isLeapYearExpected)
+        {
+            //Act
+            var isLeapYearActual = leapYear.IsLeapYear(year);
+
+            //Assert
+            Assert.AreEqual(isLeapYearExpected, isLeapYearActual);
+        }
+
+        [Test]
+        [TestCase(1600, true)]
+        [TestCase(2000, true)]
+        [TestCase(2400, true)]
+        [TestCase(2800, true)]
+        [TestCase(2020, true)]
+        public void GivenTheCurrentYearIsLeapYear_WhenYearIsDivisbleByFourAndHourHundredNotDivibleByHundred_ThenReturnTrue(int year, bool isLeapYearExpected)
         {
             //Act
             var isLeapYearActual = leapYear.IsLeapYear(year);
